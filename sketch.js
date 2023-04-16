@@ -3,6 +3,7 @@
 let inc = 0.1;
 var scl = 10;
 var cols, rows;
+var canvas;
 
 let zoff = 0;
 
@@ -18,8 +19,14 @@ var brt = 100; // brightness max 100
 var alph = 10; // alpha max 100
 var hu = 0;
 
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
+
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  canvas = createCanvas(windowWidth, windowHeight);
+  canvas.position(0, 0);
+  canvas.style('z-index', '-1');
 
   colorMode(HSB,359,100,100,100);
 
