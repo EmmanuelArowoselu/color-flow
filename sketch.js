@@ -76,6 +76,6 @@ function draw() {
     particles[i].show();
   }
 
-  fr.html(floor(frameRate()));
+  //fr.html(floor(frameRate()));
   hu +=colorInc; if (hu >359){hu=0}
 }
