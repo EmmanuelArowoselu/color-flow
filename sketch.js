@@ -19,12 +19,10 @@ var alph = 10; // alpha max 100
 var hu = 0;
 
 function setup() {
-  createCanvas(1900, 1000);
-  //1900, 1000
+  createCanvas(windowWidth, windowHeight);
 
   colorMode(HSB,359,100,100,100);
 
-  
   cols = floor(width/scl);
   rows = floor(height/scl);
   fr = createP('');
