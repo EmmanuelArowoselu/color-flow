@@ -4,6 +4,7 @@ let inc = 0.1;
 var scl = 10;
 var cols, rows;
 var canvas;
+var song; 
 
 let zoff = 0;
 
@@ -18,6 +19,20 @@ var sat = 100; // saturation max 100
 var brt = 100; // brightness max 100
 var alph = 10; // alpha max 100
 var hu = 0;
+
+function preload() {
+  song = loadSound('videoplayback.mp3');
+}
+
+function mouseClicked() {
+  if(song.isPlaying()) {
+    song.pause();
+    noLoop();
+  } else {
+    song.play();
+    loop();
+  }
+}
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
